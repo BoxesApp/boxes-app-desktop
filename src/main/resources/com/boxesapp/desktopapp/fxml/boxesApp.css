@@ -1,0 +1,24 @@
+.text-style {
+    -fx-fill: white;
+    -fx-wrap-text: true;
+    -fx-pref-width: 100%;
+    -fx-padding: 4px;
+}
+
+.button-style {
+    -fx-background-color: #255525;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-border-radius: 10px;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0, 0);
+}
+
+
+.textfield-style {
+    -fx-background-color: #1f2021;
+    -fx-text-fill: white;
+    -fx-border-color: #333333;
+    -fx-border-radius: 10px;
+    -fx-pref-width: 250px;
+}

@@ -29,7 +29,7 @@
                 <TextField fx:id="fieldPseudo" prefHeight="78.0" prefWidth="194.0" styleClass="textfield-style" GridPane.columnIndex="1" />
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-style" text="Password goes here" wrappingWidth="124.13000106811523" GridPane.rowIndex="1" />
                 <PasswordField fx:id="fieldPassword" prefHeight="58.0" prefWidth="194.0" styleClass="textfield-style" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Button fx:id="btnValidate" mnemonicParsing="false" onAction="#clickTess" prefHeight="37.0" prefWidth="209.0" styleClass="button-style" text="Validate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button fx:id="btnValidate" mnemonicParsing="false" onAction="#signUp" prefHeight="37.0" prefWidth="209.0" styleClass="button-style" text="Validate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-underline: true;" styleClass="text-style" text="not yet a user ?" textAlignment="RIGHT" wrappingWidth="190.66400146484375" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                 <CheckBox mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Remember me" textFill="#8a8a8a" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             </children>

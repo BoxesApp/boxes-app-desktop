@@ -1,13 +1,13 @@
 package com.boxesapp.desktopapp.model;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 public class User {
     private Long id;
     private String username;
     private String email;
     private String password;
-    private Long remoteId;
+    private Long remoteId = 0L;
     private Timestamp createdAt;
     private Timestamp updatedAt;
 

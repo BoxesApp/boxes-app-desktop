@@ -21,11 +21,11 @@ public class DatabaseConnetion {
     // initialize a connexion ?
     private void DBConnection(){
         try{
-//            try{
-//                new File(CustomRessources.dbDir).mkdirs();
-//            }catch (Exception e){
-//
-//            }
+            try{
+                new File(CustomRessources.dbDir).mkdirs();
+            }catch (Exception e){
+
+            }
             this.connection = DriverManager.getConnection(DB_URL);
         }catch (Exception e){
             throw new RuntimeException("Failed to initialize database connection", e);

@@ -1,6 +1,6 @@
 package com.boxesapp.desktopapp.model;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 public class Account {
     private String id;

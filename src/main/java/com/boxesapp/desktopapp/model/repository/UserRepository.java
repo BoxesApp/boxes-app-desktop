@@ -35,7 +35,7 @@ public class UserRepository implements UserDao {
             preparedStatement.setInt(4, Integer.parseInt(user.getRemoteId().toString()));
 
             preparedStatement.executeUpdate();
-            user.setId((long) preparedStatement.getResultSet().getInt("id"));
+            user.setId(preparedStatement.getResultSet().getInt("id"));
             Logger.log(new Log("a user has been created", Log.LogLevel.low));
 
         } catch (SQLException e) {
@@ -88,7 +88,7 @@ public class UserRepository implements UserDao {
     }
 
     @Override
-    public User findById(Long id) {
+    public User findById(Integer id) {
         DatabaseConnetion dbConnection = DatabaseConnetion.getInstance();
 
         User user = null;
@@ -141,7 +141,8 @@ public class UserRepository implements UserDao {
 
             if (rs.next()) {
                 user = new User();
-                user.setId( Long.parseLong(rs.getString("id")) );
+                //user.setId( Long.parseLong(rs.getString("id")) );
+                user.setId(rs.getInt("id"));
                 user.setUsername(rs.getString("username"));
                 user.setEmail(rs.getString("email"));
                 user.setPassword(rs.getString("password"));

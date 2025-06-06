@@ -3,7 +3,7 @@ package com.boxesapp.desktopapp.model;
 import java.sql.Timestamp;
 
 public class User {
-    private Long id;
+    private Integer id;
     private String username;
     private String email;
     private String password;
@@ -14,7 +14,7 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String username, String email, String password, Long remoteId, Timestamp createdAt, Timestamp updatedAt) {
+    public User(Integer id, String username, String email, String password, Long remoteId, Timestamp createdAt, Timestamp updatedAt) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -24,11 +24,11 @@ public class User {
         this.updatedAt = updatedAt;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

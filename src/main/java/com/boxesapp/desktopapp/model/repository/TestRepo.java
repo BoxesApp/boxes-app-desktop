@@ -40,7 +40,7 @@ public class TestRepo {
 
     public static void testCreateUser(){
         User item = new User(
-                0L,
+                0,
                 "user2",
                 "emil@gwe.ewe",
                 "Password",
@@ -54,7 +54,7 @@ public class TestRepo {
 
     public static void testDeleteUser(){
         User item = new User(
-                2L,
+                2,
                 "user3",
                 "emil@gwe.ewe",
                 "Password",
@@ -67,12 +67,12 @@ public class TestRepo {
     }
 
     public static void testFindById(int id){
-        User foundeduser = new UserRepository().findById((long) id);
+        User foundeduser = new UserRepository().findById(id);
         System.out.println("user founded: " + foundeduser);
     }
 
     public static void testUpdateUser(){
-        User item = new UserRepository().findById((long) 1);
+        User item = new UserRepository().findById(1);
         System.out.println("user befor update: " + item);
         item.setRemoteId(item.getRemoteId()+1);
         new UserRepository().update(item);

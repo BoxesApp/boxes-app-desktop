@@ -3,7 +3,7 @@ package com.boxesapp.desktopapp.model;
 import java.sql.Timestamp;
 
 public class Credential {
-    private Long id;
+    private Integer id;
     private Account account;
     private String title;
     private String content;
@@ -14,7 +14,7 @@ public class Credential {
     public Credential() {
     }
 
-    public Credential(Long id, Account account, String title, String content, Timestamp createdAt, Timestamp updatedAt) {
+    public Credential(Integer id, Account account, String title, String content, Timestamp createdAt, Timestamp updatedAt) {
         this.id = id;
         this.account = account;
         this.title = title;
@@ -23,11 +23,11 @@ public class Credential {
         this.updatedAt = updatedAt;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

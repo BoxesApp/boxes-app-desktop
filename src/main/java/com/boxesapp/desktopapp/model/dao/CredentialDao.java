@@ -8,4 +8,10 @@ import java.util.List;
 public interface CredentialDao extends Dao<Credential> {
 
     public List<Credential> getByAccount(Account account);
+
+    /**
+     * Delete all the credentials related to and account.
+     * @param account
+     */
+    public void delete(Account account);
 }

@@ -18,7 +18,7 @@ import java.util.List;
 public class AccountRepository implements AccountDao {
     private static final String SQL_CREATE = "insert into accounts (name, description, id_owner) values (?, ?, ?)";
     private static final String SQL_UPDATE = "update accounts set name = ?, description = ?, id_owner = ? where id = ?";
-    private static final String FIND_BY_ID = "select * from accounts inner join users on id_owner = users.id where id = ?";
+    private static final String FIND_BY_ID = "select * from accounts inner join users on id_owner = users.id where accounts.id = ?";
     private static final String FIND_BY_OWNER = "select * from accounts where id_owner = ?";
     private static final String DELETE_BY_ID = "delete from accounts where id = ?";
 
@@ -43,7 +43,11 @@ public class AccountRepository implements AccountDao {
             preparedStatement.setInt(3, Integer.parseInt(account.getOwner().getId().toString()));
 
             preparedStatement.executeUpdate();
-            account.setId(preparedStatement.getResultSet().getInt("id"));
+            ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                account.setId(generatedKeys.getInt(1));
+            }
+
             Logger.log(new Log("an account has been created", Log.LogLevel.low));
         } catch (SQLException e) {
             System.out.printf("SQL Exception: %s\n", e.getMessage());

@@ -1,9 +1,9 @@
 package com.boxesapp.desktopapp.model;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 public class Account {
-    private String id;
+    private Integer id;
     private String name;
     private String description;
     private User owner; // owner
@@ -13,7 +13,7 @@ public class Account {
     public Account() {
     }
 
-    public Account(String id, String name, String description, User owner, Timestamp createdAt, Timestamp updatedAt) {
+    public Account(Integer id, String name, String description, User owner, Timestamp createdAt, Timestamp updatedAt) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -22,11 +22,11 @@ public class Account {
         this.updatedAt = updatedAt;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

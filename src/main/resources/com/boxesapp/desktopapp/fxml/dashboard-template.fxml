@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="container" stylesheets="@boxesApp.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" styleClass="container" stylesheets="@boxesApp.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="400.0" prefWidth="131.0" spacing="5.0" styleClass="border-right">
          <children>
@@ -41,7 +41,10 @@
             <TextField layoutX="15.0" layoutY="148.0" styleClass="textfield-style" />
             <Text layoutX="15.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-style" text="Description include.." wrappingWidth="137.13000106811523" />
             <TextField layoutX="15.0" layoutY="148.0" styleClass="textfield-style" />
-            <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="139.0" style="-fx-background-color: #255525;" styleClass="button-style" stylesheets="@boxesApp.css" text="Button" />
+            <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="139.0" style="-fx-background-color: #255525; -fx-background-radius: 10; -fx-cursor: pointer;" styleClass="button-style" stylesheets="@boxesApp.css" text="Filter">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
          </children>
          <opaqueInsets>
             <Insets />
@@ -50,17 +53,17 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </VBox>
-      <TabPane prefHeight="400.0" prefWidth="461.0" stylesheets="@boxesApp.css" tabClosingPolicy="UNAVAILABLE">
+      <TabPane prefHeight="400.0" prefWidth="553.0" styleClass="my-tab-pane" stylesheets="@boxesApp.css" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Accounts">
                <content>
-                  <AnchorPane prefHeight="369.0" prefWidth="423.0">
+                  <AnchorPane prefHeight="369.0" prefWidth="500.0">
                      <children>
-                        <VBox prefHeight="369.0" prefWidth="431.0" styleClass="container">
+                        <VBox prefHeight="369.0" prefWidth="550.0" styleClass="container">
                            <children>
-                              <ScrollPane prefHeight="347.0" prefWidth="461.0" styleClass="container">
+                              <ScrollPane prefHeight="347.0" prefWidth="575.0" styleClass="container">
                                 <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="434.0" styleClass="container" />
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="533.0" styleClass="container" />
                                 </content>
                               </ScrollPane>
                               <Text fill="#4eae4e" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright @ jo17-dev - All right reserved" textAlignment="CENTER" wrappingWidth="453.13000106811523">

@@ -4,6 +4,7 @@ module com.boxesapp.desktopapp {
 
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
+    requires java.desktop;
 
     opens com.boxesapp.desktopapp to javafx.fxml;
     exports com.boxesapp.desktopapp.view;

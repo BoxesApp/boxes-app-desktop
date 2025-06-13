@@ -1,0 +1,8 @@
+.item-container{
+    -fx-background-color: transparent; /* à mettre transparent */
+}
+
+
+.account-name{
+    -fx-text-fill: white;
+}

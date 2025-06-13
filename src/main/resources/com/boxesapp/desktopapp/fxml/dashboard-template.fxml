@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" styleClass="container" stylesheets="@boxesApp.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" styleClass="container" stylesheets="@boxesApp.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boxesapp.desktopapp.controller.DashboardTemplateController">
    <children>
       <VBox prefHeight="400.0" prefWidth="131.0" spacing="5.0" styleClass="border-right">
          <children>
@@ -53,18 +53,18 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </VBox>
-      <TabPane prefHeight="400.0" prefWidth="553.0" styleClass="my-tab-pane" stylesheets="@boxesApp.css" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="tabPane" prefHeight="400.0" prefWidth="553.0" styleClass="my-tab-pane" stylesheets="@boxesApp.css" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Accounts">
+          <Tab fx:id="tabAccount" text="Accounts">
                <content>
                   <AnchorPane prefHeight="369.0" prefWidth="500.0">
                      <children>
                         <VBox prefHeight="369.0" prefWidth="550.0" styleClass="container">
                            <children>
-                              <ScrollPane prefHeight="347.0" prefWidth="575.0" styleClass="container">
-                                <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="533.0" styleClass="container" />
-                                </content>
+                              <ScrollPane fx:id="scrollPaneAccounts" prefHeight="347.0" prefWidth="575.0" styleClass="container">
+                                 <content>
+                                    <VBox fx:id="accountsContainer" prefHeight="320.0" prefWidth="530.0" />
+                                 </content>
                               </ScrollPane>
                               <Text fill="#4eae4e" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright @ jo17-dev - All right reserved" textAlignment="CENTER" wrappingWidth="453.13000106811523">
                                  <font>
@@ -77,8 +77,8 @@
                   </AnchorPane>
                </content>
             </Tab>
-          <Tab text="Settings" />
-            <Tab text="Backup" />
+          <Tab fx:id="tabSettings" text="Settings" />
+            <Tab fx:id="tabBackup" text="Backup" />
         </tabs>
       </TabPane>
    </children>

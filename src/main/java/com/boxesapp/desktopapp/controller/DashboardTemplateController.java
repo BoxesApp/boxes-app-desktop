@@ -95,12 +95,12 @@ public class DashboardTemplateController {
             return new ItemAccountController(new Account()){
                 @Override
                 public void onDelete() {
-                    System.out.println("deletelcliqued");
+                    System.out.println("delete cliqued");
                 }
 
                 @Override
                 public void onEdit() {
-                    System.out.println("edit");
+                    System.out.println("edit cliqued");
                 }
             };
         });

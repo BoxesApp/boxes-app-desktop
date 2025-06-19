@@ -89,25 +89,15 @@ public class DashboardTemplateController {
     private void loadAccountsPage() throws IOException {
         accountsContainer.getChildren().clear();
         System.out.println("loading accounts...");
-        ArrayList<Account> accounts = new ArrayList<>();
-        FXMLLoader fxmlLoader = new FXMLLoader(BoxesApp.class.getResource("/com/boxesapp/desktopapp/fxml/item-account.fxml"));
-        fxmlLoader.setControllerFactory(param -> {
-            return new ItemAccountController(new Account()){
-                @Override
-                public void onDelete() {
-                    System.out.println("delete cliqued");
-                }
+        // ArrayList<Account> accounts = new ArrayList<>();
 
-                @Override
-                public void onEdit() {
-                    System.out.println("edit cliqued");
-                }
-            };
-        });
 
-        for(int i=0; i< 70; i++){
-            fxmlLoader.setRoot(null);
+        for(int i=0; i< 45; i++){
+            FXMLLoader fxmlLoader = new FXMLLoader(BoxesApp.class.getResource("/com/boxesapp/desktopapp/fxml/item-account.fxml"));
+            fxmlLoader.setController(new ItemAccountController());
             HBox itemAccountNode =  fxmlLoader.load();
+            ItemAccountController controller = fxmlLoader.getController();
+            controller.initialize();
             accountsContainer.getChildren().add(itemAccountNode);
         }
         System.out.println(accountsContainer.getChildren().size());

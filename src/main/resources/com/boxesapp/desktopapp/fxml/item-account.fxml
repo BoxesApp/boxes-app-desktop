@@ -20,9 +20,9 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btnEdit1" style="-fx-background-color: transparent;">
+      <Button fx:id="btnDelete" style="-fx-background-color: transparent;">
          <graphic>
-            <ImageView fx:id="btnDelete" fitHeight="20" fitWidth="20">
+            <ImageView fitHeight="20" fitWidth="20">
                <image>
                   <Image url="@../../../../statics/delete_btn.png" />
                </image>

@@ -79,3 +79,21 @@
     -fx-font-weight: bold;
     -fx-text-fill: whitesmoke;
 }
+
+.text-area {
+    -fx-control-inner-background: #333;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-background-color: transparent;
+}
+
+.text-area .content {
+    -fx-background-color: #333;
+    -fx-padding: 5px;  /* Marge intérieure pour éviter que le texte touche les bords */
+}
+
+
+.red-btn{
+    -fx-background-color: darkred;
+    -fx-text-fill: #dcdcdc;
+}

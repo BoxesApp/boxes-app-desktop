@@ -10,7 +10,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -79,6 +82,73 @@
             </Tab>
           <Tab fx:id="tabSettings" text="Settings" />
             <Tab fx:id="tabBackup" text="Backup" />
+            <Tab fx:id="tabNewAccount" text="New Account">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="-2.0" layoutY="-2.0" prefHeight="364.0" prefWidth="550.0">
+                           <children>
+                              <Text layoutX="5.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #255525; -fx-font-weight: bold; -fx-font-size: 18;" text="New Account" textAlignment="CENTER" wrappingWidth="539.1300010681152" />
+                              <VBox alignment="CENTER" layoutX="47.0" layoutY="46.0" prefHeight="28.0" prefWidth="469.0" style="-fx-border-color: e60000;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-size: 12;" text="This is an error sample" />
+                                 </children>
+                              </VBox>
+                              <HBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="82.0" prefHeight="280.0" prefWidth="550.0">
+                                 <children>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="280.0" prefWidth="157.0" spacing="10.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-weight: bold;" text="General infos" textAlignment="CENTER" wrappingWidth="234.13000106811523" />
+                                          <GridPane alignment="TOP_RIGHT" hgap="5.0" prefHeight="80.0" prefWidth="274.0" vgap="10.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                              <RowConstraints fillHeight="false" maxHeight="112.0" minHeight="10.0" valignment="TOP" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="26.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: right; -fx-fill: white;" text="Account's name:" wrappingWidth="103.13000106811523" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: right;" text="Description:" wrappingWidth="78.13000106811523" GridPane.rowIndex="1" />
+                                                <TextField styleClass="textfield-style" GridPane.columnIndex="1" />
+                                                <TextField styleClass="textfield-style" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                          <Button mnemonicParsing="false" prefHeight="18.0" prefWidth="74.0" style="-fx-padding: 1;" styleClass="button-style" text="Create" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="280.0" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-fill: white; -fx-font-weight: bold;" text="Accounts's credentials" wrappingWidth="262.13000106811523" />
+                                          <ScrollPane prefHeight="262.0" prefWidth="296.0" styleClass="container">
+                                             <content>
+                                                <VBox fx:id="itemCredentialFormContainer" prefHeight="248.0" prefWidth="284.0" spacing="10.0" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="14.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
         </tabs>
       </TabPane>
    </children>

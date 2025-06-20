@@ -1,5 +1,7 @@
 .item-container{
     -fx-background-color: transparent; /* à mettre transparent */
+    -fx-border-color: #333;
+    -fx-border-width: 0 0 1 0;
 }
 
 

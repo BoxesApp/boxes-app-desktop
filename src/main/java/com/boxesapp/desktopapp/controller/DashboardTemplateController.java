@@ -11,6 +11,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -36,6 +37,9 @@ public class DashboardTemplateController {
 
     @FXML
     public ScrollPane scrollPaneAccounts;
+
+    @FXML
+    public VBox itemCredentialFormContainer;
 
 
 
@@ -75,6 +79,14 @@ public class DashboardTemplateController {
                 case "tabBackup":
                     loadBackupPage();
                     break;
+                case "tabNewAccount":
+                    try{
+                        loadNewAccountPage();
+                    }catch(IOException e){
+                        Logger.log(new Log(e.getMessage(), Log.LogLevel.exception));
+                        System.out.printf(e.getMessage());
+                    }
+                    break;
                 default:
                     break;
             }
@@ -110,6 +122,20 @@ public class DashboardTemplateController {
 
     private  void loadBackupPage(){
         System.out.println("loading settings...");
+    }
+
+    private void loadNewAccountPage() throws IOException {
+        System.out.println("loading new account page...");
+
+
+        for(int i=0; i<5; i++){
+            FXMLLoader fxmlLoader = new FXMLLoader(BoxesApp.class.getResource("/com/boxesapp/desktopapp/fxml/item-credential-form.fxml"));
+            fxmlLoader.setController(new ItemCredentialFormController());
+            //  fxmlLoader.setRoot(accountsContainer);
+            GridPane itemCredentialForm = fxmlLoader.load();
+            itemCredentialFormContainer.getChildren().add(itemCredentialForm);
+        }
+        System.out.println("Nbre de item credential ajoutés : " + itemCredentialFormContainer.getChildren().size());
     }
 
     /*

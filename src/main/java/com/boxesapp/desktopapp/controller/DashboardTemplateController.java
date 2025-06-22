@@ -1,6 +1,7 @@
 package com.boxesapp.desktopapp.controller;
 
 import com.boxesapp.desktopapp.model.Account;
+import com.boxesapp.desktopapp.utils.CustomRessources;
 import com.boxesapp.desktopapp.utils.Log;
 import com.boxesapp.desktopapp.utils.Logger;
 import com.boxesapp.desktopapp.view.BoxesApp;
@@ -41,6 +42,9 @@ public class DashboardTemplateController {
     @FXML
     public VBox itemCredentialFormContainer;
 
+    @FXML
+    public Text appVersion;
+
 
 
     public void initialize() {
@@ -51,6 +55,8 @@ public class DashboardTemplateController {
                     updatePanes(newTab);
                 }
         );
+
+        appVersion.setText("V. "+ CustomRessources.appVersion);
     }
 
     /**
@@ -104,9 +110,19 @@ public class DashboardTemplateController {
         // ArrayList<Account> accounts = new ArrayList<>();
 
 
-        for(int i=0; i< 45; i++){
+        for(int i=0; i< 25; i++){
             FXMLLoader fxmlLoader = new FXMLLoader(BoxesApp.class.getResource("/com/boxesapp/desktopapp/fxml/item-account.fxml"));
-            fxmlLoader.setController(new ItemAccountController());
+            fxmlLoader.setController(new ItemAccountController(){
+                @Override
+                public void onDelete(){
+                    System.out.println("on delete clicked hahaha");
+                }
+
+                @Override
+                public void onEdit(){
+                    System.out.println("on edit clicked hha");
+                }
+            });
             HBox itemAccountNode =  fxmlLoader.load();
             ItemAccountController controller = fxmlLoader.getController();
             controller.initialize();

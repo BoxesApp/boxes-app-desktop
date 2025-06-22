@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
-public class ItemAccountController {
+public abstract class ItemAccountController {
 
     @FXML
     public Text txtAccountName;
@@ -37,22 +37,6 @@ public class ItemAccountController {
     }
 
 
-
-
-    @FXML
-    public void onEditClicked(){
-        System.out.println("edit clicked");
-    }
-
-    @FXML
-    public void onDeleteClicked(Event event){
-        System.out.println("delete clicked");
-    }
-
-    public void onDelete(){
-        System.out.println("delete clicked");
-    }
-    public void onEdit(){
-        System.out.println("edit clicked");
-    }
+    public abstract void onDelete();
+    public abstract void onEdit();
 }

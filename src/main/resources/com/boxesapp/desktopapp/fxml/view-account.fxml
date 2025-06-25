@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minWidth="-Infinity" prefHeight="341.0" prefWidth="540.0" styleClass="container" stylesheets="@boxesApp.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boxesapp.desktopapp.controller.ViewAccountController">
+   <children>
+           <Text layoutX="5.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #255525; -fx-font-weight: bold; -fx-font-size: 18;" text="View Account" textAlignment="CENTER" wrappingWidth="482.13000106811523" />
+           <VBox alignment="CENTER" layoutX="47.0" layoutY="56.0" prefHeight="19.0" prefWidth="420.0" style="-fx-border-color: green;">
+               <children>
+                   <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-size: 12;" text="Tip: You can click on any field to copy the content">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Text>
+               </children>
+           </VBox>
+           <HBox alignment="TOP_CENTER" layoutX="7.0" layoutY="82.0" minWidth="-Infinity" prefHeight="260.0" prefWidth="526.0">
+               <children>
+                   <VBox alignment="TOP_RIGHT" prefHeight="280.0" prefWidth="137.0" spacing="10.0">
+                       <children>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-weight: bold;" text="General infos" textAlignment="CENTER" wrappingWidth="234.13000106811523" />
+                           <GridPane alignment="TOP_RIGHT" hgap="5.0" prefHeight="80.0" prefWidth="274.0" vgap="10.0">
+                               <columnConstraints>
+                                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                               </columnConstraints>
+                               <rowConstraints>
+                                   <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                   <RowConstraints fillHeight="false" maxHeight="112.0" minHeight="10.0" valignment="TOP" vgrow="SOMETIMES" />
+                                   <RowConstraints maxHeight="26.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                               </rowConstraints>
+                               <opaqueInsets>
+                                   <Insets />
+                               </opaqueInsets>
+                               <VBox.margin>
+                                   <Insets top="20.0" />
+                               </VBox.margin>
+                               <children>
+                                   <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: right; -fx-fill: white;" text="Account's name:" wrappingWidth="103.13000106811523" />
+                                   <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: right;" text="Description:" wrappingWidth="78.13000106811523" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="text-style" text="  N/A" GridPane.columnIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="text-style" text="  N/A" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                               </children>
+                           </GridPane>
+                       </children>
+                   </VBox>
+                   <VBox layoutX="10.0" layoutY="10.0" minWidth="-Infinity" prefHeight="260.0" prefWidth="274.0">
+                       <children>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-fill: white; -fx-font-weight: bold;" text="Accounts's credentials" wrappingWidth="262.13000106811523" />
+                           <ScrollPane minWidth="-Infinity" prefHeight="247.0" prefWidth="250.0" styleClass="container">
+                               <content>
+                                   <VBox fx:id="itemCredentialFormContainer" prefHeight="305.0" prefWidth="232.0" spacing="10.0" />
+                               </content>
+                           </ScrollPane>
+                       </children>
+                       <opaqueInsets>
+                           <Insets />
+                       </opaqueInsets>
+                       <HBox.margin>
+                           <Insets left="14.0" />
+                       </HBox.margin>
+                   </VBox>
+               </children>
+           </HBox>
+   </children>
+</AnchorPane>

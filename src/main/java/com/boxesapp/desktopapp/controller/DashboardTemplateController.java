@@ -121,9 +121,24 @@ public class DashboardTemplateController {
                 @Override
                 public void onEdit(){
                     System.out.println("on edit clicked hha");
+                    try{
+                        loadNewAccountPage();
+                    }catch(IOException e){
+                        Logger.log(new Log(e.getMessage(), Log.LogLevel.exception));
+                        System.out.printf(e.getMessage());
+                    }
                 }
             });
             HBox itemAccountNode =  fxmlLoader.load();
+            // when we click on the whole node - open the related account
+            itemAccountNode.setOnMouseClicked(action ->{
+                try{
+                    loadNewAccount();
+                }catch(IOException e){
+                    Logger.log(new Log(e.getMessage(), Log.LogLevel.exception));
+                    System.out.printf(e.getMessage());
+                }
+            });
             ItemAccountController controller = fxmlLoader.getController();
             controller.initialize();
             accountsContainer.getChildren().add(itemAccountNode);
@@ -152,6 +167,17 @@ public class DashboardTemplateController {
             itemCredentialFormContainer.getChildren().add(itemCredentialForm);
         }
         System.out.println("Nbre de item credential ajoutés : " + itemCredentialFormContainer.getChildren().size());
+    }
+
+
+    private void loadNewAccount() throws IOException {
+        System.out.println("loading account view...");
+        FXMLLoader accountViewLoader = new FXMLLoader(BoxesApp.class.getResource("/com/boxesapp/desktopapp/fxml/view-account.fxml"));
+
+        accountsContainer.getChildren().clear();
+        accountsContainer.getChildren().add(
+                accountViewLoader.load()
+        );
     }
 
     /*
